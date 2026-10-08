@@ -1,0 +1,43 @@
+en
+conf t
+
+ip routing
+
+inter vlan 10
+ ip address 172.16.10.1 255.255.255.0
+ no shut
+
+inter vlan 20
+ ip address 172.16.20.1 255.255.255.0
+ no shut
+
+inter vlan 30
+ ip address 172.16.30.1 255.255.255.0
+ no shut
+
+inter vlan 40
+ ip address 172.16.40.1 255.255.255.0
+ no shut
+
+inter vlan 50
+ ip address 172.16.50.1 255.255.255.0
+ no shut
+
+inter vlan 99
+ ip address 172.16.99.1 255.255.255.0
+ no shut
+
+inter vlan 110
+ ip address 172.16.110.1 255.255.255.0
+ no shut
+
+inter vlan 120
+ ip address 172.16.120.1 255.255.255.0
+ no shut
+
+inter vlan 130
+ ip address 172.16.130.1 255.255.255.0
+ no shut
+
+exit
+exit

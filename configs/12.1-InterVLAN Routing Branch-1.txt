@@ -1,0 +1,20 @@
+en
+conf t
+
+inter e0/0.10
+ encapsulation dot1q 10
+ ip address 172.17.10.1 255.255.255.0
+
+inter e0/0.20
+ encapsulation dot1q 20
+ ip address 172.17.20.1 255.255.255.0
+
+inter e0/0.99
+ encapsulation dot1q 99
+ ip address 172.17.99.1 255.255.255.0
+
+inter e0/0
+ no shut
+
+exit
+exit

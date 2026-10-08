@@ -1,0 +1,15 @@
+en
+conf t
+
+interface loopback 2
+ ip address 217.18.19.0 255.255.255.255
+exit
+
+ip route 0.0.0.0 0.0.0.0 192.168.224.1
+
+exit
+
+------------------------------------------
+
+ping 64.1.1.5 source loopback 2
+ping 165.1.1.5 source loopback 2

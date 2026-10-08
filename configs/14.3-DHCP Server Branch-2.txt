@@ -1,0 +1,22 @@
+en
+conf t
+
+service dhcp
+
+ip dhcp excluded-address 172.18.10.1 172.18.10.99
+ip dhcp excluded-address 172.18.20.1 172.18.20.99
+
+ip dhcp pool V-10
+ network 172.18.10.0 255.255.255.0
+ default-router 172.18.10.1
+ dns-server 9.9.9.9 8.8.8.8
+ domain-name arjang.ac.ir
+
+ip dhcp pool V-20
+ network 172.18.20.0 255.255.255.0
+ default-router 172.18.20.1
+ dns-server 9.9.9.9 8.8.8.8
+ domain-name arjang.ac.ir
+
+exit
+exit

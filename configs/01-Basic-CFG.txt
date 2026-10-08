@@ -1,0 +1,29 @@
+en
+conf t
+
+hostname SW-B1
+
+service password-encryption
+
+enable algorithm-type scrypt secret 123
+username hadi privilege 15 algorithm-type scrypt secret 123
+
+ip domain name hadi.ir
+crypto key generate rsa modulus 2048
+ip ssh ver 2
+
+no ip domain lookup
+no ip http server
+no ip http secure-server
+
+line con 0
+ login local
+ logging synchronous
+
+line vty 0 4
+ login local
+ transport input ssh
+ logging synchronous
+
+exit
+exit

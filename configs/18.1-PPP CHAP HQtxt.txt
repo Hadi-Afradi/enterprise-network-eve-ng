@@ -1,0 +1,14 @@
+en
+conf t
+
+username RTR-B1 password 123456789
+username RTR-B2 password 123456789
+
+inter ser1/1
+ ppp authentication chap
+
+inter ser1/2
+ ppp authentication chap
+
+exit
+exit

@@ -1,0 +1,18 @@
+en
+conf t
+
+inter e2/1
+ no switchport
+ ip address 192.168.0.1 255.255.255.252
+
+inter e2/2
+ no switchport
+ ip address 192.168.0.5 255.255.255.252
+
+exit
+exit
+
+-----------------------------------------
+
+ping 192.168.0.2
+ping 192.168.0.6

@@ -1,0 +1,15 @@
+en
+conf t
+
+ip access-list extended NETWORK-SRV-ACL
+ permit  ip  172.16.50.0 0.0.0.255  172.16.130.0 0.0.0.255
+ permit  ip  192.168.0.0 0.0.3.255  172.16.130.0 0.0.0.255
+ permit  ip  172.16.99.0 0.3.0.255  172.16.130.0 0.0.0.255
+ permit  ip  172.20.0.0 0.0.3.255  172.16.130.0 0.0.0.255
+ deny  ip  any  any
+
+inter vlan 130
+ ip access-group NETWORK-SRV-ACL out
+
+exit
+exit

@@ -1,0 +1,9 @@
+en
+conf t
+
+inter e0/1
+ no cdp enable
+ no lldp transmit
+
+exit
+exit

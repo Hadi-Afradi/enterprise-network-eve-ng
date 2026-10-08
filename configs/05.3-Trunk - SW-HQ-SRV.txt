@@ -1,0 +1,9 @@
+en
+conf t
+
+inter po1
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+
+exit
+exit

@@ -1,0 +1,15 @@
+en
+conf t
+
+no ip routing
+
+inter vlan 99
+ ip address 172.16.99.100 255.255.255.0
+ no shut
+exit
+
+ip default-gateway 172.16.99.1
+
+exit
+
+ping 172.16.130.10

@@ -1,0 +1,27 @@
+en
+conf t
+
+inter e0/0
+ ip nat inside
+exit
+
+inter e0/1
+ ip nat outside
+exit
+
+ip access-list standard NAT-ACL
+ permit 172.16.10.0 0.0.0.255
+ permit 172.16.20.0 0.0.0.255
+ permit 172.16.30.0 0.0.0.255
+ permit 172.16.40.0 0.0.0.255
+ permit 172.16.50.0 0.0.0.255
+ permit 172.16.120.0 0.0.0.255
+ permit 172.17.10.0 0.0.0.255
+ permit 172.17.20.0 0.0.0.255
+exit
+
+ip nat pool PUBLIC-POOL 217.18.19.1 217.18.19.7 netmask 255.255.255.248
+
+ip nat inside source list NAT-ACL pool PUBLIC-POOL overload
+
+exit

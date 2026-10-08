@@ -1,0 +1,9 @@
+en
+conf t
+
+inter range e0/1-2
+ switchport port-security
+ switchport port-security maximum 1
+
+exit
+exit

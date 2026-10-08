@@ -1,0 +1,17 @@
+en
+conf t
+
+inter range e1/0-1
+ switchport mode access
+ switchport access vlan 110
+
+inter range e1/2-3
+ switchport mode access
+ switchport access vlan 120
+
+inter range e2/1-3
+ switchport mode access
+ switchport access vlan 130
+
+exit
+exit

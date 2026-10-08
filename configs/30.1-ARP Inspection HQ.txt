@@ -1,0 +1,14 @@
+en
+conf t
+
+ip arp inspection vlan 10,20,30,40,50
+ip arp inspection validate src-mac dst-mac ip
+
+inter e0/1 
+ ip arp inspection limit rate 5
+
+inter e0/0
+ ip arp inspection trust
+
+exit
+exit

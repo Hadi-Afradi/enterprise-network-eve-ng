@@ -1,0 +1,8 @@
+en
+conf t
+
+router ospf 1
+ default-information originate
+
+exit
+exit

@@ -1,0 +1,7 @@
+en
+conf t
+
+ip nat inside source static tcp 172.16.120.7 443 217.18.19.1 443
+ip nat inside source static tcp 172.16.120.9 443 217.18.19.2 443
+
+exit

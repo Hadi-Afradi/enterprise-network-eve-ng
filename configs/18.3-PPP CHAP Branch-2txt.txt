@@ -1,0 +1,10 @@
+en
+conf t
+
+username RTR-HQ-WAN password 123456789
+
+inter ser1/2
+ ppp authentication chap
+
+exit
+exit

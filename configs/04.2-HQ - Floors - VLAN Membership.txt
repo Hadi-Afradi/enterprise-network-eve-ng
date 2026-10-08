@@ -1,0 +1,9 @@
+en
+conf t
+
+inter e0/1
+ switchport mode access
+ switchport access vlan 50
+
+exit
+exit

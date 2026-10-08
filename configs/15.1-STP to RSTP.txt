@@ -1,0 +1,6 @@
+en
+conf t
+
+spanning-tree mode rapid-pvst
+
+exit

@@ -1,0 +1,17 @@
+en
+conf t
+
+ip access-list extended DMZ-SRV-ACL
+ permit  ip  172.16.50.0 0.0.0.255  172.16.120.0 0.0.0.255
+ deny  ip  172.16.110.0 0.0.0.255  172.16.120.0 0.0.0.255
+ deny  ip  172.16.130.0 0.0.0.255  172.16.120.0 0.0.0.255
+ permit  icmp  172.16.0.0 0.3.255.255  172.16.120.0 0.0.0.255  echo
+ permit  tcp  any  host 172.16.120.7 eq 443
+ permit  tcp  any  host 172.16.120.9 eq 443
+ deny ip any any
+
+inter vlan 120
+ ip access-group DMZ-SRV-ACL out
+
+exit
+exit

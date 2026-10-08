@@ -1,0 +1,16 @@
+en
+conf t
+
+vtp mode off
+
+vlan 10
+name Group-A
+
+vlan 20
+name Group-B
+
+vlan 99
+name Device-MGMT
+
+exit
+exit

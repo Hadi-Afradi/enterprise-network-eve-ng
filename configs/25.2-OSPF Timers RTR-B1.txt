@@ -1,0 +1,9 @@
+en
+conf t
+
+inter tun1
+ ip ospf hello-interval 2
+ ip ospf dead-interval 6
+
+exit
+exit

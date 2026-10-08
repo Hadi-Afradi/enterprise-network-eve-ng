@@ -1,0 +1,15 @@
+en
+conf t
+
+ip access-list extended LOCAL-SRV-ACL
+ permit  ip  172.16.50.0 0.0.0.255  172.16.110.0 0.0.0.255
+ permit  icmp  172.16.0.0 0.3.255.255  172.16.110.0 0.0.0.255  echo
+ permit  tcp  172.16.0.0 0.3.255.255  host 172.16.110.7  range 20 21
+ permit  tcp  172.16.0.0 0.3.255.255  host 172.16.110.9  eq 443
+ deny  ip  any  any
+
+inter vlan 110
+ ip access-group LOCAL-SRV-ACL out
+
+exit
+exit

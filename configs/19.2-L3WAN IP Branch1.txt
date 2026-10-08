@@ -1,0 +1,9 @@
+en
+conf t
+
+inter e0/1
+ ip address 10.1.1.2 255.255.255.252
+ no shut
+
+exit
+exit

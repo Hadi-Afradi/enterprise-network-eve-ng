@@ -1,0 +1,20 @@
+en
+conf t
+
+inter vlan 10
+ ip helper-address 172.16.130.10
+
+inter vlan 20
+ ip helper-address 172.16.130.10
+
+inter vlan 30
+ ip helper-address 172.16.130.10
+
+inter vlan 40
+ ip helper-address 172.16.130.10
+
+inter vlan 50
+ ip helper-address 172.16.130.10
+
+exit
+exit

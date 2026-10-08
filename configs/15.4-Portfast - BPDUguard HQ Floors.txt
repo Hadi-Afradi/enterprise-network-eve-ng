@@ -1,0 +1,9 @@
+en
+conf t
+
+inter e0/1
+ spanning-tree portfast 
+ spanning-tree bpduguard enable
+
+exit
+exit

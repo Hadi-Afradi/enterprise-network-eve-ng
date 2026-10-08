@@ -1,0 +1,42 @@
+en
+conf t
+
+vtp mode off
+
+vlan 10
+name Floor-1
+
+vlan 20
+name Floor-2
+
+vlan 30
+name Floor-3
+
+vlan 40
+name Floor-4
+
+vlan 50
+name Admins
+
+vlan 99
+name Device-MGMT
+
+vlan 110
+name Local-SRV
+
+vlan 120
+name DMZ-SRV
+
+vlan 130
+name Network-SRV
+
+exit
+exit
+
+
+----------------------
+verification:
+
+show vlan brief
+show vtp status
+

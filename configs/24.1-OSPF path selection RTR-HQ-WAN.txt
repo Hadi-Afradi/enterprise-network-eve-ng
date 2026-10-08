@@ -1,0 +1,9 @@
+en
+conf t
+
+inter range tunnel 1-2
+ bandwidth 2000
+
+exit
+exit
+

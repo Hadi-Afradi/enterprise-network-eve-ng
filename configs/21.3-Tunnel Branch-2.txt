@@ -1,0 +1,13 @@
+en
+conf t
+
+inter tunnel 2
+ tunnel source 10.2.2.2
+ tunnel destin 10.0.0.2
+ ip address 192.168.2.6 255.255.255.252
+ ip mtu 1400
+ ip tcp adjust-mss 1360
+ keepalive
+
+exit
+exit

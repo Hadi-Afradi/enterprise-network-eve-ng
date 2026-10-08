@@ -1,0 +1,16 @@
+en
+conf t
+
+inter range e0/0 -3
+ channel-protocol lacp
+ channel-group 1 mode passive
+
+exit
+exit
+
+
+-----------
+verification:
+
+show etherchannel summary
+show inter po1

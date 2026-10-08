@@ -1,0 +1,13 @@
+en
+conf t
+
+router ospf 1
+ network 172.16.0.0 0.0.255.255 area 0
+ network 172.20.0.0 0.0.0.255 area 0
+ network 192.168.0.0 0.0.0.255 area 0
+ passive-interface default
+ no passive-interface e2/1
+ no passive-interface e2/2
+
+exit
+exit

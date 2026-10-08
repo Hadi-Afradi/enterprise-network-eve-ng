@@ -1,0 +1,10 @@
+en
+conf t
+
+inter e0/1
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+
+exit
+exit

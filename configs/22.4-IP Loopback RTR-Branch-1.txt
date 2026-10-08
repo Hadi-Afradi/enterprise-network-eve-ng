@@ -1,0 +1,8 @@
+en 
+conf t
+
+inter loopback 1
+ ip address 172.20.1.1 255.255.255.255
+
+exit
+exit
