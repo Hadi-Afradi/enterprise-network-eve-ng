@@ -18,6 +18,8 @@ Cisco IOS, EVE-NG
 
 ## Documentation
 Full step-by-step documentation (goal, configuration, verification and result for each step) is in [docs/Technical_Report.pdf](docs/Technical_Report.pdf) (Persian).
+## Device Configurations
+Final configuration of every device is available in the [configs/](configs/) folder (switches and routers of HQ, Branch 1, Branch 2 and ISP).
 
 ## Note
 This is a lab environment. Passwords in the configs are for lab use only.
